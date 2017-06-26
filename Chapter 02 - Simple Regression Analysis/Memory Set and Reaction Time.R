@@ -8,8 +8,8 @@ Y    = c(433, 435, 434, 441, 457, 519, 511, 513, 520, 537, 598, 584, 606, 605, 6
 data = data.frame(X, Y)
 
 # We now get a summary of simple statistics for the data
-Mean    = sapply(data, mean)
-Std_Dev = sapply(data, sd)
+mean    = sapply(data, mean)
+std_dev = sapply(data, sd)
 r       = cor(X, Y)
 
 # We now perform the regression analysis on the data
@@ -31,8 +31,8 @@ dev.off()
 
 # We now print the data and all the results
 print(data)
-print(Mean)
-print(Std_Dev)
+print(mean)
+print(std_dev)
 print(r)
 print(summary(reg1))
 print(summary(aov1))
