@@ -9,6 +9,16 @@ data     = data.frame(Length, Meanings)
 mean     = sapply(data, mean)
 std_dev  = sapply(data, sd)
 
+# We now perform a correlation and a test on the data which gives
+# confidence intervals
+cor1 = cor.test(length, meanings, method = c("pearson"))
+
+# We now perform a regression analysis on the data
+reg1 = lm(length ~ meanings)
+
+# We now perform an ANOVA on the data
+aov1 = aov(length ~ meanings)
+
 #
 # We now plot the points and SAVE the plot as a PDF
 #
@@ -19,16 +29,6 @@ std_dev  = sapply(data, sd)
 pdf('corr_plot.pdf')
 plot(length, meanings, main = "Plot of Length vs Meanings")
 dev.off()
-
-# We now perform a correlation and a test on the data which gives
-# confidence intervals
-cor1 = cor.test(length, meanings, method = c("pearson"))
-
-# We now perform a regression analysis on the data
-reg1 = lm(length ~ meanings)
-
-# We now perform an ANOVA on the data
-aov1 = aov(length ~ meanings)
 
 # We now print the data and all the results
 print(data)
