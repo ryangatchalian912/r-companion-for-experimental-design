@@ -3,7 +3,7 @@
 # We first enter the data under two different variable names
 length   = c(3, 6, 2, 6, 2, 9, 6, 5, 9, 4, 7, 11, 5, 4, 3, 9, 10, 5, 4, 10)
 meanings = c(8, 4, 10, 1, 11, 1, 4, 3, 1, 6, 2, 1, 9, 3, 4, 1, 3, 3, 3, 2)
-data     = data.frame(Length, Meanings)
+data     = data.frame(length, meanings)
 
 # We now get a summary of simple statistics for the data
 mean     = sapply(data, mean)
