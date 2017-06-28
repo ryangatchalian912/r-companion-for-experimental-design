@@ -1,4 +1,4 @@
-# Regression Example: Retroactive Interference
+# Regression Example: Age, Speech Rate and Memory Span
 
 # NOTE: Install and load package "rms" in order to use the "ols"
 # function.
@@ -28,13 +28,12 @@ if (!require(rms))
 }
 
 # We first arrange the data into the Predictors (X and T) and Regressor (Y)
-# In this example the predictors are Number of Learning Trials (X) and
-# Number of interpolated lists (T)
-X = c(2, 2, 2, 4, 4, 4, 8, 8, 8, 2, 2, 2, 4, 4, 4, 8, 8, 8)
-T = c(2, 4, 8, 2, 4, 8, 2, 4, 8, 2, 4, 8, 2, 4, 8, 2, 4, 8)
+# In this example the predictors are Age (X) and Speech Rate (T)
+X = c(4, 4, 7, 7, 10, 10)
+T = c(1, 2, 2, 4, 3, 6)
 
 # The Regressors are the number of words correctly recalled (Y).
-Y = c(35, 21, 6, 40, 34, 18, 61, 58, 46, 39, 31, 8, 52, 42, 26, 73, 66, 52)
+Y = c(14, 23, 30, 50, 39, 67)
 
 # Create data frame
 data = data.frame(X, T, Y)
